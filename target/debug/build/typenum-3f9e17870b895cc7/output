@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/luca/languages/rust/stm32g4/target/debug/build/typenum-3f9e17870b895cc7/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/home/luca/languages/rust/stm32g4/target/debug/build/typenum-3f9e17870b895cc7/out/op.rs

@@ -15,7 +15,7 @@ compile the device(s) you want. To use, in your Cargo.toml:
 
 ```toml
 [dependencies.stm32g4]
-version = "0.13.1"
+version = "0.12.1"
 features = ["stm32g431", "rt"]
 ```
 

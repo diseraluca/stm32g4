@@ -1,0 +1,1 @@
+/home/luca/languages/rust/stm32g4/target/debug/libstm32g4.rlib: /home/luca/languages/rust/stm32g4/build.rs /home/luca/languages/rust/stm32g4/src/generic.rs /home/luca/languages/rust/stm32g4/src/lib.rs build.rs

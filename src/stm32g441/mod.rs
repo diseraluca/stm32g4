@@ -26,8 +26,8 @@ extern "C" {
     fn ADC1_2();
     fn USB_HP();
     fn USB_LP();
-    fn FDCAN1_INTR1_IT();
     fn FDCAN1_INTR0_IT();
+    fn FDCAN1_INTR1_IT();
     fn EXTI9_5();
     fn TIM1_BRK_TIM15();
     fn TIM1_UP_TIM16();
@@ -112,10 +112,10 @@ pub static __INTERRUPTS: [Vector; 102] = [
     Vector { _handler: USB_HP },
     Vector { _handler: USB_LP },
     Vector {
-        _handler: FDCAN1_INTR1_IT,
+        _handler: FDCAN1_INTR0_IT,
     },
     Vector {
-        _handler: FDCAN1_INTR0_IT,
+        _handler: FDCAN1_INTR1_IT,
     },
     Vector { _handler: EXTI9_5 },
     Vector {
@@ -261,10 +261,10 @@ pub enum Interrupt {
     USB_HP = 19,
     #[doc = "20 - USB_LP"]
     USB_LP = 20,
-    #[doc = "21 - fdcan1_intr1_it"]
-    FDCAN1_INTR1_IT = 21,
-    #[doc = "22 - fdcan1_intr0_it"]
-    FDCAN1_INTR0_IT = 22,
+    #[doc = "21 - fdcan1_intr0_it"]
+    FDCAN1_INTR0_IT = 21,
+    #[doc = "22 - fdcan1_intr1_it"]
+    FDCAN1_INTR1_IT = 22,
     #[doc = "23 - EXTI9_5"]
     EXTI9_5 = 23,
     #[doc = "24 - TIM1_BRK_TIM15"]

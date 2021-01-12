@@ -1706,7 +1706,7 @@ impl WWDG {
     #[doc = r"Returns a pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const wwdg::RegisterBlock {
-        0x4000_3000 as *const _
+        0x4000_2c00 as *const _
     }
 }
 impl Deref for WWDG {
@@ -1727,7 +1727,7 @@ impl IWDG {
     #[doc = r"Returns a pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const iwdg::RegisterBlock {
-        0x4000_2c00 as *const _
+        0x4000_3000 as *const _
     }
 }
 impl Deref for IWDG {

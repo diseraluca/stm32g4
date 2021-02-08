@@ -1,8 +1,8 @@
-#[doc = "Reader of register CR"]
+///Reader of register CR
 pub type R = crate::R<u32, super::CR>;
-#[doc = "Writer for register CR"]
+///Writer for register CR
 pub type W = crate::W<u32, super::CR>;
-#[doc = "Register CR `reset()`'s with value 0"]
+///Register CR `reset()`'s with value 0
 impl crate::ResetValue for super::CR {
     type Type = u32;
     #[inline(always)]
@@ -10,72 +10,72 @@ impl crate::ResetValue for super::CR {
         0
     }
 }
-#[doc = "Reader of field `CED`"]
+///Reader of field `CED`
 pub type CED_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CED`"]
+///Write proxy for field `CED`
 pub struct CED_W<'a> {
     w: &'a mut W,
 }
 impl<'a> CED_W<'a> {
-    #[doc = r"Sets the field bit"]
+    ///Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r"Clears the field bit"]
+    ///Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `IE`"]
+///Reader of field `IE`
 pub type IE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IE`"]
+///Write proxy for field `IE`
 pub struct IE_W<'a> {
     w: &'a mut W,
 }
 impl<'a> IE_W<'a> {
-    #[doc = r"Sets the field bit"]
+    ///Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r"Clears the field bit"]
+    ///Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `RNGEN`"]
+///Reader of field `RNGEN`
 pub type RNGEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RNGEN`"]
+///Write proxy for field `RNGEN`
 pub struct RNGEN_W<'a> {
     w: &'a mut W,
 }
 impl<'a> RNGEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+    ///Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r"Clears the field bit"]
+    ///Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
@@ -83,34 +83,34 @@ impl<'a> RNGEN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 5 - Clock error detection"]
+    ///Bit 5 - Clock error detection
     #[inline(always)]
     pub fn ced(&self) -> CED_R {
         CED_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - Interrupt enable"]
+    ///Bit 3 - Interrupt enable
     #[inline(always)]
     pub fn ie(&self) -> IE_R {
         IE_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - Random number generator enable"]
+    ///Bit 2 - Random number generator enable
     #[inline(always)]
     pub fn rngen(&self) -> RNGEN_R {
         RNGEN_R::new(((self.bits >> 2) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 5 - Clock error detection"]
+    ///Bit 5 - Clock error detection
     #[inline(always)]
     pub fn ced(&mut self) -> CED_W {
         CED_W { w: self }
     }
-    #[doc = "Bit 3 - Interrupt enable"]
+    ///Bit 3 - Interrupt enable
     #[inline(always)]
     pub fn ie(&mut self) -> IE_W {
         IE_W { w: self }
     }
-    #[doc = "Bit 2 - Random number generator enable"]
+    ///Bit 2 - Random number generator enable
     #[inline(always)]
     pub fn rngen(&mut self) -> RNGEN_W {
         RNGEN_W { w: self }

@@ -1,8 +1,8 @@
-#[doc = "Reader of register SR"]
+///Reader of register SR
 pub type R = crate::R<u32, super::SR>;
-#[doc = "Writer for register SR"]
+///Writer for register SR
 pub type W = crate::W<u32, super::SR>;
-#[doc = "Register SR `reset()`'s with value 0"]
+///Register SR `reset()`'s with value 0
 impl crate::ResetValue for super::SR {
     type Type = u32;
     #[inline(always)]
@@ -10,24 +10,24 @@ impl crate::ResetValue for super::SR {
         0
     }
 }
-#[doc = "Reader of field `UIF`"]
+///Reader of field `UIF`
 pub type UIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UIF`"]
+///Write proxy for field `UIF`
 pub struct UIF_W<'a> {
     w: &'a mut W,
 }
 impl<'a> UIF_W<'a> {
-    #[doc = r"Sets the field bit"]
+    ///Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r"Clears the field bit"]
+    ///Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
         self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
@@ -35,14 +35,14 @@ impl<'a> UIF_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Update interrupt flag"]
+    ///Bit 0 - Update interrupt flag
     #[inline(always)]
     pub fn uif(&self) -> UIF_R {
         UIF_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Update interrupt flag"]
+    ///Bit 0 - Update interrupt flag
     #[inline(always)]
     pub fn uif(&mut self) -> UIF_W {
         UIF_W { w: self }

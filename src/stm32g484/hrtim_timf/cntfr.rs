@@ -1,8 +1,8 @@
-#[doc = "Reader of register CNTFR"]
+///Reader of register CNTFR
 pub type R = crate::R<u32, super::CNTFR>;
-#[doc = "Writer for register CNTFR"]
+///Writer for register CNTFR
 pub type W = crate::W<u32, super::CNTFR>;
-#[doc = "Register CNTFR `reset()`'s with value 0"]
+///Register CNTFR `reset()`'s with value 0
 impl crate::ResetValue for super::CNTFR {
     type Type = u32;
     #[inline(always)]
@@ -10,14 +10,14 @@ impl crate::ResetValue for super::CNTFR {
         0
     }
 }
-#[doc = "Reader of field `CNTx`"]
+///Reader of field `CNTx`
 pub type CNTX_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `CNTx`"]
+///Write proxy for field `CNTx`
 pub struct CNTX_W<'a> {
     w: &'a mut W,
 }
 impl<'a> CNTX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
         self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
@@ -25,14 +25,14 @@ impl<'a> CNTX_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:15 - Timerx Counter value"]
+    ///Bits 0:15 - Timerx Counter value
     #[inline(always)]
     pub fn cntx(&self) -> CNTX_R {
         CNTX_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Timerx Counter value"]
+    ///Bits 0:15 - Timerx Counter value
     #[inline(always)]
     pub fn cntx(&mut self) -> CNTX_W {
         CNTX_W { w: self }

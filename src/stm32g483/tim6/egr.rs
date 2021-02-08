@@ -1,6 +1,6 @@
-#[doc = "Writer for register EGR"]
+///Writer for register EGR
 pub type W = crate::W<u32, super::EGR>;
-#[doc = "Register EGR `reset()`'s with value 0"]
+///Register EGR `reset()`'s with value 0
 impl crate::ResetValue for super::EGR {
     type Type = u32;
     #[inline(always)]
@@ -8,22 +8,22 @@ impl crate::ResetValue for super::EGR {
         0
     }
 }
-#[doc = "Write proxy for field `UG`"]
+///Write proxy for field `UG`
 pub struct UG_W<'a> {
     w: &'a mut W,
 }
 impl<'a> UG_W<'a> {
-    #[doc = r"Sets the field bit"]
+    ///Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r"Clears the field bit"]
+    ///Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
         self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
@@ -31,7 +31,7 @@ impl<'a> UG_W<'a> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Update generation"]
+    ///Bit 0 - Update generation
     #[inline(always)]
     pub fn ug(&mut self) -> UG_W {
         UG_W { w: self }

@@ -1,8 +1,8 @@
-#[doc = "Reader of register CMP1FR"]
+///Reader of register CMP1FR
 pub type R = crate::R<u32, super::CMP1FR>;
-#[doc = "Writer for register CMP1FR"]
+///Writer for register CMP1FR
 pub type W = crate::W<u32, super::CMP1FR>;
-#[doc = "Register CMP1FR `reset()`'s with value 0"]
+///Register CMP1FR `reset()`'s with value 0
 impl crate::ResetValue for super::CMP1FR {
     type Type = u32;
     #[inline(always)]
@@ -10,14 +10,14 @@ impl crate::ResetValue for super::CMP1FR {
         0
     }
 }
-#[doc = "Reader of field `CMP1x`"]
+///Reader of field `CMP1x`
 pub type CMP1X_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `CMP1x`"]
+///Write proxy for field `CMP1x`
 pub struct CMP1X_W<'a> {
     w: &'a mut W,
 }
 impl<'a> CMP1X_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
         self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
@@ -25,14 +25,14 @@ impl<'a> CMP1X_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:15 - Timerx Compare 1 value"]
+    ///Bits 0:15 - Timerx Compare 1 value
     #[inline(always)]
     pub fn cmp1x(&self) -> CMP1X_R {
         CMP1X_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Timerx Compare 1 value"]
+    ///Bits 0:15 - Timerx Compare 1 value
     #[inline(always)]
     pub fn cmp1x(&mut self) -> CMP1X_W {
         CMP1X_W { w: self }

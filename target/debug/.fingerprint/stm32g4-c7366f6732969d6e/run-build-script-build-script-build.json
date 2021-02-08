@@ -1,0 +1,1 @@
+{"rustc":7130491502384388335,"features":"","target":0,"profile":0,"path":0,"deps":[[5253346789308365913,"build_script_build",false,9276723901720640261],[12086940391099350904,"build_script_build",false,10156590630814320821]],"local":[{"RerunIfChanged":{"output":"debug/build/stm32g4-c7366f6732969d6e/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0}

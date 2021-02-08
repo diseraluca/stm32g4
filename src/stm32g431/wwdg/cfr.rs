@@ -1,8 +1,8 @@
-#[doc = "Reader of register CFR"]
+///Reader of register CFR
 pub type R = crate::R<u32, super::CFR>;
-#[doc = "Writer for register CFR"]
+///Writer for register CFR
 pub type W = crate::W<u32, super::CFR>;
-#[doc = "Register CFR `reset()`'s with value 0x7f"]
+///Register CFR `reset()`'s with value 0x7f
 impl crate::ResetValue for super::CFR {
     type Type = u32;
     #[inline(always)]
@@ -10,10 +10,12 @@ impl crate::ResetValue for super::CFR {
         0x7f
     }
 }
-#[doc = "Early wakeup interrupt\n\nValue on reset: 0"]
+///Early wakeup interrupt
+///
+///Value on reset: 0
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EWI_A {
-    #[doc = "1: interrupt occurs whenever the counter reaches the value 0x40"]
+    ///1: interrupt occurs whenever the counter reaches the value 0x40
     ENABLE = 1,
 }
 impl From<EWI_A> for bool {
@@ -22,10 +24,10 @@ impl From<EWI_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `EWI`"]
+///Reader of field `EWI`
 pub type EWI_R = crate::R<bool, EWI_A>;
 impl EWI_R {
-    #[doc = r"Get enumerated values variant"]
+    ///Get enumerated values variant
     #[inline(always)]
     pub fn variant(&self) -> crate::Variant<bool, EWI_A> {
         use crate::Variant::*;
@@ -34,79 +36,81 @@ impl EWI_R {
             i => Res(i),
         }
     }
-    #[doc = "Checks if the value of the field is `ENABLE`"]
+    ///Checks if the value of the field is `ENABLE`
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
         *self == EWI_A::ENABLE
     }
 }
-#[doc = "Write proxy for field `EWI`"]
+///Write proxy for field `EWI`
 pub struct EWI_W<'a> {
     w: &'a mut W,
 }
 impl<'a> EWI_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
+    ///Writes `variant` to the field
     #[inline(always)]
     pub fn variant(self, variant: EWI_A) -> &'a mut W {
         {
             self.bit(variant.into())
         }
     }
-    #[doc = "interrupt occurs whenever the counter reaches the value 0x40"]
+    ///interrupt occurs whenever the counter reaches the value 0x40
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
         self.variant(EWI_A::ENABLE)
     }
-    #[doc = r"Sets the field bit"]
+    ///Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r"Clears the field bit"]
+    ///Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Reader of field `W`"]
+///Reader of field `W`
 pub type W_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `W`"]
+///Write proxy for field `W`
 pub struct W_W<'a> {
     w: &'a mut W,
 }
 impl<'a> W_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !0x7f) | ((value as u32) & 0x7f);
         self.w
     }
 }
-#[doc = "Timer base\n\nValue on reset: 0"]
+///Timer base
+///
+///Value on reset: 0
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum WDGTB_A {
-    #[doc = "4: Counter clock (PCLK1 div 4096) div 16"]
+    ///4: Counter clock (PCLK1 div 4096) div 16
     DIV16 = 4,
-    #[doc = "5: Counter clock (PCLK1 div 4096) div 32"]
+    ///5: Counter clock (PCLK1 div 4096) div 32
     DIV32 = 5,
-    #[doc = "6: Counter clock (PCLK1 div 4096) div 64"]
+    ///6: Counter clock (PCLK1 div 4096) div 64
     DIV64 = 6,
-    #[doc = "7: Counter clock (PCLK1 div 4096) div 128"]
+    ///7: Counter clock (PCLK1 div 4096) div 128
     DIV128 = 7,
-    #[doc = "0: Counter clock (PCLK1 div 4096) div 1"]
+    ///0: Counter clock (PCLK1 div 4096) div 1
     DIV1 = 0,
-    #[doc = "1: Counter clock (PCLK1 div 4096) div 2"]
+    ///1: Counter clock (PCLK1 div 4096) div 2
     DIV2 = 1,
-    #[doc = "2: Counter clock (PCLK1 div 4096) div 4"]
+    ///2: Counter clock (PCLK1 div 4096) div 4
     DIV4 = 2,
-    #[doc = "3: Counter clock (PCLK1 div 4096) div 8"]
+    ///3: Counter clock (PCLK1 div 4096) div 8
     DIV8 = 3,
 }
 impl From<WDGTB_A> for u8 {
@@ -115,10 +119,10 @@ impl From<WDGTB_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `WDGTB`"]
+///Reader of field `WDGTB`
 pub type WDGTB_R = crate::R<u8, WDGTB_A>;
 impl WDGTB_R {
-    #[doc = r"Get enumerated values variant"]
+    ///Get enumerated values variant
     #[inline(always)]
     pub fn variant(&self) -> WDGTB_A {
         match self.bits {
@@ -133,100 +137,100 @@ impl WDGTB_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `DIV16`"]
+    ///Checks if the value of the field is `DIV16`
     #[inline(always)]
     pub fn is_div16(&self) -> bool {
         *self == WDGTB_A::DIV16
     }
-    #[doc = "Checks if the value of the field is `DIV32`"]
+    ///Checks if the value of the field is `DIV32`
     #[inline(always)]
     pub fn is_div32(&self) -> bool {
         *self == WDGTB_A::DIV32
     }
-    #[doc = "Checks if the value of the field is `DIV64`"]
+    ///Checks if the value of the field is `DIV64`
     #[inline(always)]
     pub fn is_div64(&self) -> bool {
         *self == WDGTB_A::DIV64
     }
-    #[doc = "Checks if the value of the field is `DIV128`"]
+    ///Checks if the value of the field is `DIV128`
     #[inline(always)]
     pub fn is_div128(&self) -> bool {
         *self == WDGTB_A::DIV128
     }
-    #[doc = "Checks if the value of the field is `DIV1`"]
+    ///Checks if the value of the field is `DIV1`
     #[inline(always)]
     pub fn is_div1(&self) -> bool {
         *self == WDGTB_A::DIV1
     }
-    #[doc = "Checks if the value of the field is `DIV2`"]
+    ///Checks if the value of the field is `DIV2`
     #[inline(always)]
     pub fn is_div2(&self) -> bool {
         *self == WDGTB_A::DIV2
     }
-    #[doc = "Checks if the value of the field is `DIV4`"]
+    ///Checks if the value of the field is `DIV4`
     #[inline(always)]
     pub fn is_div4(&self) -> bool {
         *self == WDGTB_A::DIV4
     }
-    #[doc = "Checks if the value of the field is `DIV8`"]
+    ///Checks if the value of the field is `DIV8`
     #[inline(always)]
     pub fn is_div8(&self) -> bool {
         *self == WDGTB_A::DIV8
     }
 }
-#[doc = "Write proxy for field `WDGTB`"]
+///Write proxy for field `WDGTB`
 pub struct WDGTB_W<'a> {
     w: &'a mut W,
 }
 impl<'a> WDGTB_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
+    ///Writes `variant` to the field
     #[inline(always)]
     pub fn variant(self, variant: WDGTB_A) -> &'a mut W {
         {
             self.bits(variant.into())
         }
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 16"]
+    ///Counter clock (PCLK1 div 4096) div 16
     #[inline(always)]
     pub fn div16(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV16)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 32"]
+    ///Counter clock (PCLK1 div 4096) div 32
     #[inline(always)]
     pub fn div32(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV32)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 64"]
+    ///Counter clock (PCLK1 div 4096) div 64
     #[inline(always)]
     pub fn div64(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV64)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 128"]
+    ///Counter clock (PCLK1 div 4096) div 128
     #[inline(always)]
     pub fn div128(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV128)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 1"]
+    ///Counter clock (PCLK1 div 4096) div 1
     #[inline(always)]
     pub fn div1(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV1)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 2"]
+    ///Counter clock (PCLK1 div 4096) div 2
     #[inline(always)]
     pub fn div2(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV2)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 4"]
+    ///Counter clock (PCLK1 div 4096) div 4
     #[inline(always)]
     pub fn div4(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV4)
     }
-    #[doc = "Counter clock (PCLK1 div 4096) div 8"]
+    ///Counter clock (PCLK1 div 4096) div 8
     #[inline(always)]
     pub fn div8(self) -> &'a mut W {
         self.variant(WDGTB_A::DIV8)
     }
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x07 << 11)) | (((value as u32) & 0x07) << 11);
@@ -234,34 +238,34 @@ impl<'a> WDGTB_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 9 - Early wakeup interrupt"]
+    ///Bit 9 - Early wakeup interrupt
     #[inline(always)]
     pub fn ewi(&self) -> EWI_R {
         EWI_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bits 0:6 - 7-bit window value"]
+    ///Bits 0:6 - 7-bit window value
     #[inline(always)]
     pub fn w(&self) -> W_R {
         W_R::new((self.bits & 0x7f) as u8)
     }
-    #[doc = "Bits 11:13 - Timer base"]
+    ///Bits 11:13 - Timer base
     #[inline(always)]
     pub fn wdgtb(&self) -> WDGTB_R {
         WDGTB_R::new(((self.bits >> 11) & 0x07) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 9 - Early wakeup interrupt"]
+    ///Bit 9 - Early wakeup interrupt
     #[inline(always)]
     pub fn ewi(&mut self) -> EWI_W {
         EWI_W { w: self }
     }
-    #[doc = "Bits 0:6 - 7-bit window value"]
+    ///Bits 0:6 - 7-bit window value
     #[inline(always)]
     pub fn w(&mut self) -> W_W {
         W_W { w: self }
     }
-    #[doc = "Bits 11:13 - Timer base"]
+    ///Bits 11:13 - Timer base
     #[inline(always)]
     pub fn wdgtb(&mut self) -> WDGTB_W {
         WDGTB_W { w: self }

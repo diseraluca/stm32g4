@@ -1,8 +1,8 @@
-#[doc = "Reader of register KEYR6"]
+///Reader of register KEYR6
 pub type R = crate::R<u32, super::KEYR6>;
-#[doc = "Writer for register KEYR6"]
+///Writer for register KEYR6
 pub type W = crate::W<u32, super::KEYR6>;
-#[doc = "Register KEYR6 `reset()`'s with value 0"]
+///Register KEYR6 `reset()`'s with value 0
 impl crate::ResetValue for super::KEYR6 {
     type Type = u32;
     #[inline(always)]
@@ -10,14 +10,14 @@ impl crate::ResetValue for super::KEYR6 {
         0
     }
 }
-#[doc = "Reader of field `KEY`"]
+///Reader of field `KEY`
 pub type KEY_R = crate::R<u32, u32>;
-#[doc = "Write proxy for field `KEY`"]
+///Write proxy for field `KEY`
 pub struct KEY_W<'a> {
     w: &'a mut W,
 }
 impl<'a> KEY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
         self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
@@ -25,14 +25,14 @@ impl<'a> KEY_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - AES key"]
+    ///Bits 0:31 - AES key
     #[inline(always)]
     pub fn key(&self) -> KEY_R {
         KEY_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - AES key"]
+    ///Bits 0:31 - AES key
     #[inline(always)]
     pub fn key(&mut self) -> KEY_W {
         KEY_W { w: self }

@@ -1,6 +1,6 @@
-#[doc = "Writer for register OPTKEYR"]
+///Writer for register OPTKEYR
 pub type W = crate::W<u32, super::OPTKEYR>;
-#[doc = "Register OPTKEYR `reset()`'s with value 0"]
+///Register OPTKEYR `reset()`'s with value 0
 impl crate::ResetValue for super::OPTKEYR {
     type Type = u32;
     #[inline(always)]
@@ -8,12 +8,12 @@ impl crate::ResetValue for super::OPTKEYR {
         0
     }
 }
-#[doc = "Write proxy for field `OPTKEYR`"]
+///Write proxy for field `OPTKEYR`
 pub struct OPTKEYR_W<'a> {
     w: &'a mut W,
 }
 impl<'a> OPTKEYR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+    ///Writes raw bits to the field
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
         self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
@@ -21,7 +21,7 @@ impl<'a> OPTKEYR_W<'a> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Option byte key"]
+    ///Bits 0:31 - Option byte key
     #[inline(always)]
     pub fn optkeyr(&mut self) -> OPTKEYR_W {
         OPTKEYR_W { w: self }
